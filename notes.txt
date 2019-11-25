@@ -1,0 +1,6 @@
+npm i --save-dev jest@24.9.0 enzyme enzyme-adapter-react-16 jest-enzyme raf@3.4.1
+npm i --save-dev babel-plugin-react-remove-properties
+
+npm run eject
+
+

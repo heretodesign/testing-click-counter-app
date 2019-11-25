@@ -34,5 +34,17 @@
     "enzyme-adapter-react-16": "^1.15.1",
     "jest": "^24.9.0",
     "jest-enzyme": "^7.1.2"
+  },
+  "babel": {
+    "env": {
+      "production": {
+        "plugins": [
+          ["react-remove-properties", {"properties": ["data-test"]}]
+        ]
+      }
+    },
+    "presets": [
+      "react-app"
+    ]
   }
 }
