@@ -31,25 +31,25 @@ const findByTestAttr = (wrapper, val) => {
 }
 
 test('renders without error', () => {
-  const wrapper = setup;
+  const wrapper = setup(); //watch the setup well
   const appComponent = findByTestAttr(wrapper, 'component-app');
   expect(appComponent.length).toBe(1);
 }); 
 
 test('renders increment button', () => {
-  const wrapper = setup;
+  const wrapper = setup();
   const button = findByTestAttr(wrapper, 'increment-button');
   expect(button.length).toBe(1);
 });
 
 test('renders counter counterDisplay', () => {
-  const wrapper = setup;
+  const wrapper = setup();
   const counterDisplay = findByTestAttr(wrapper, 'counter-display');
   expect(counterDisplay.length).toBe(1);
 });
 
 test('renders counter starts at 0', () => {
-  const wrapper = setup;
+  const wrapper = setup();
   const initialCounterState = wrapper.state('counter');
   expect(initialCounterState).toBe(0);
 });
